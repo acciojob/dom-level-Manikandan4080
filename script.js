@@ -1,11 +1,14 @@
-//your JS code here. If required.
-const element = document.getElementById("level");
-const level = 1;
+let levelElement = document.getElementById("level");
+
+let level = 1;
+
 while(true){
-	if(element.tagName == "HTML"){
+	if(levelElement.tagName === "HTML"){
 		break;
 	}
+
+	levelElement = levelElement.parentNode;
 	level++;
-	element = element.parentNode;
 }
+
 alert(`The level of the element is: ${level}`);
